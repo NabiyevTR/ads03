@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 
 public class Task2 {
     public static void main(String[] args) {
-        System.out.print("Reversed text: " + reverse(readFromConsole()));
+        System.out.println("Reversed text: " + reverse(readFromConsole()));
     }
 
     private static String reverse(String text) {

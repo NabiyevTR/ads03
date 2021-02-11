@@ -54,4 +54,24 @@ public class PriorityQueueImpl<E extends Comparable<? super E>> implements IQueu
     public boolean isFull() {
         return size == data.length;
     }
+
+    @Override
+    public void display() {
+        System.out.println(this);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("HEAD -> [");
+
+        for (int i = 0; i < size; i++) {
+            sb.append(data[i]);
+            if (i < size - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("] <-TAIL");
+        return sb.toString();
+    }
+
 }

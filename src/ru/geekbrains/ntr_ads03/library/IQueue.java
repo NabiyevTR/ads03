@@ -10,6 +10,8 @@ public interface IQueue<E> {
 
     int size();
 
+    void display();
+
     boolean isEmpty();
 
     boolean isFull();

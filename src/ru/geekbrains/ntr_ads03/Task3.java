@@ -13,7 +13,7 @@ public class Task3 {
         deque.addFirst(5);
         deque.addFirst(6);
 
-        System.out.println(deque);  //HEAD -> [5, 4, 3, 2, 1] <-TAIL
+        deque.display();  //HEAD -> [5, 4, 3, 2, 1] <-TAIL
         System.out.println("Peek first:" + deque.peekFirst());
         System.out.println("Peek last:" + deque.peekLast());
 
@@ -22,25 +22,23 @@ public class Task3 {
         deque.removeFirst();
         deque.removeFirst();
 
-        System.out.println(deque);  //HEAD -> [2] <-TAIL
+        deque.display();  //HEAD -> [2] <-TAIL
 
         deque.addLast(3);
         deque.addLast(4);
         deque.addLast(5);
 
-        System.out.println(deque); //HEAD -> [2, 3, 4, 5] <-TAIL
+        deque.display();  //HEAD -> [2, 3, 4, 5] <-TAIL
 
         deque.removeLast();
         deque.removeFirst();
 
-        System.out.println(deque); //HEAD -> [3, 4] <-TAIL
+        deque.display();  //HEAD -> [3, 4] <-TAIL
 
         deque.push(3);
-        System.out.println(deque); //HEAD -> [3, 3, 4] <-TAIL
+        deque.display();  //HEAD -> [3, 3, 4] <-TAIL
 
     }
-
-
 
 
 }

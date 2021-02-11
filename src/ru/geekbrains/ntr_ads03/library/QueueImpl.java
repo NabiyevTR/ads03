@@ -2,16 +2,15 @@ package ru.geekbrains.ntr_ads03.library;
 
 public class QueueImpl<E> implements IQueue<E> {
 
-    private static final int DEFAULT_HEAD = 0;
-    private static final int DEFAULT_TAIL = -1;
+    static final int DEFAULT_HEAD = 0;
+    static final int DEFAULT_TAIL = -1;
 
     protected final E[] data;
     protected int size;
 
-    private int tail;
-    private int head;
+    int tail;
+    int head;
 
-    @SuppressWarnings("unchecked")
     public QueueImpl(int maxSize) {
         this.data = (E[]) new Object[maxSize];
         this.head = DEFAULT_HEAD;
@@ -68,5 +67,27 @@ public class QueueImpl<E> implements IQueue<E> {
     public boolean isFull() {
         return size == data.length;
     }
+
+    public void display() {
+        System.out.println(this);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder("HEAD -> [");
+        int index = head;
+        for (int i = 0; i < size; i++) {
+            if (index == data.length) {
+                index = 0;
+            }
+            sb.append(data[index++]);
+            if (i < size - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("] <-TAIL");
+        return sb.toString();
+    }
 }
+
 
