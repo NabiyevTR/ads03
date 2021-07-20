@@ -5,7 +5,6 @@ public class StackImpl<E> implements IStack<E> {
     private final E[] data;
     private int size;
 
-    @SuppressWarnings("unchecked")
     public StackImpl(int maxSize) {
         this.data = (E[]) new Object[maxSize];
     }
@@ -45,7 +44,6 @@ public class StackImpl<E> implements IStack<E> {
         System.out.println(this);
     }
 
-    @SuppressWarnings("DuplicatedCode")
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("[");
